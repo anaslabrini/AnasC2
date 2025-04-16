@@ -1,6 +1,6 @@
 # AnasC2 🕷️
 
-![AnasC2 Logo](AC2.png)
+![AnasC2 Logo](browser.png)
 
 **AnasC2** is a comprehensive browser-based Command & Control (C2) tool designed for cybersecurity testing and Red Team operations. Developed in Python with Flask and Socket.IO, this tool offers a variety of modules for managing target devices, scanning websites, and testing HTTP status codes.  
 Developed with passion by [anasslabrini](https://github.com/anasslabrini).  
