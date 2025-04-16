@@ -219,4 +219,5 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 **Anas Labrini**  
 📍 Salé, Morocco  
 📧 hackthebox.time@gmail.com
-Instagram: [anasans005]([https://anaslabrini.netlify.app](https://www.instagram.com/anasans005?igsh=dzNsOXN3Nm9INmVk))
+
+Instagram: [anasans005](https://www.instagram.com/anasans005?igsh=dzNsOXN3Nm9INmVk)
